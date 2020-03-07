@@ -1,0 +1,73 @@
+@media (max-width: 600px) {
+  p, body {
+    background-color: lightyellow;
+  }
+
+  table {
+    width: 100%;
+  }
+}
+h3, h1 {
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  color: lightseagreen;
+  padding-top: 20px;
+}
+
+p, body {
+  font-family: "Lato", sans-serif;
+  font-size: small;
+}
+
+table {
+  border: 2px solid black;
+  border-collapse: collapse;
+  width: 70%;
+  color: #333;
+}
+
+.table-text {
+  text-align: left;
+}
+
+.col {
+  margin-top: 10px;
+}
+
+th {
+  background-color: lightseagreen;
+}
+
+td, th {
+  border: 1px solid black;
+  padding: 5px;
+  text-align: center;
+}
+
+.middle-1 {
+  height: auto;
+}
+
+.list {
+  margin-top: 40px;
+  color: #333;
+}
+
+.refs {
+  font-weight: bold;
+  font-size: 20px;
+  color: lightseagreen;
+  margin-top: 40px;
+}
+
+.img {
+  width: 20%;
+}
+
+.other {
+  margin-top: 20px;
+}
+
+/*# sourceMappingURL=style.css.map */
