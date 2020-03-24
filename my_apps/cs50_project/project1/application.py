@@ -200,15 +200,26 @@ def api(isbn):
             # converting to printable objects
             review_count = reviews_object.count
             review_average_rating = reviews_object.avg
-            api_result = {
-                "title":            books_object.title,
-                "author":           books_object.author,
-                "year":             int(books_object.year),
-                "isbn":             str(isbn),
-                "review_count":     review_count,
-                "average_rating":   round(review_average_rating, 1)
-            }
-            return (api_result)
+            if review_average_rating != None:
+                api_result = {
+                    "title":            books_object.title,
+                    "author":           books_object.author,
+                    "year":             int(books_object.year),
+                    "isbn":             str(isbn),
+                    "review_count":     review_count,
+                    "average_rating":   float('%.2f' % review_average_rating)
+                }
+                return (api_result)
+            if review_average_rating == None:
+                api_result = {
+                    "title":            books_object.title,
+                    "author":           books_object.author,
+                    "year":             int(books_object.year),
+                    "isbn":             str(isbn),
+                    "review_count":     review_count,
+                    "average_rating":   'null'
+                }
+                return (api_result)
 
         else:
             error_404 = {
