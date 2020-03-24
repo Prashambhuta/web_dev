@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Project 1: Home
+{% endblock %}
+
+{% block body %}
+    <div class="card mx-auto border-primary" style="width: 400px;">
+        <div class="card-body">
+    {% if session["user_id"] %}
+        <!-- TODO: generate a search box -->
+        <h5 class="card-title">Click 'Search' to search for books.</56>
+    
+
+    {% else %}
+        <!-- TODO: Login Box -->
+        <h5 class="card-title">Welcome to Project 1</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Kindly login or register to search for books.</h6>
+        <p class="card-text">On this website, you can search from the database of 5000 popular books, and leave reviews.</p>
+        <a href="/login" class="card-link">Login</a>
+        <a href="/register" class="card-link">Register</a>
+
+    {% endif %}
+        </div>
+    </div>
+
+{% endblock %}

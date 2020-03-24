@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Project 1: Search
+{% endblock %}
+
+{% block body %}
+
+{% if result %}
+
+    {% for items in result %}
+    
+    <div class="card border-primary m-2 mb-3 mr-auto" style="width: 14rem;">
+        <div class="card-body">
+            <h5 class="card-title">{{ items.title }}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{ items.author }}</h6>
+        </div>
+            <ul class="list-group list-group-flush" id="search_listing">
+                <li class="list-group-item">ISBN: {{ items.isbn }}</li>
+                <li class="list-group-item">Published: {{ items.year }}</li>
+                <li class="list-group-item">Book ID: {{ items.id }}</li>
+              </ul>
+              <a href="{{ url_for('book', book_id=items.id) }}" class="btn btn-primary">Go to book</a>
+      </div>
+
+    {% endfor %}
+
+{% elif not result and request.method == "POST" %}
+<div class="card mx-auto" style="width: 400px;">
+    <div class="card-body">
+        <h5 class="card-title text-danger">No results found, search again.</h5>
+        <form action="" method="POST">
+            <div class="form-group">
+                <label for="isbn_input">Search by ISBN</label>
+                <input type="text" name="isbn" class="form-control" id="user_input" placeholder="0618346260, 9780618346264">
+            </div>
+            <div class="form-group">
+                <label for="title_input">Search by title</label>
+                <input type="text" name="title" class="form-control" placeholder="A Christmas Carol">
+            </div>
+            <div class="form-group">
+                <label for="author_input">Search by author</label>
+                <input type="text" name="author" class="form-control" placeholder="Charles Dickens">
+            </div>
+                <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+    </div>
+</div>
+
+{% else %}
+
+<div class="card border-primary mx-auto" style="width: 400px;">
+    <div class="card-body">
+        <h5 class="card-title">Search for a book.</h5>
+        <form action="" method="POST">
+            <div class="form-group">
+                <label for="isbn_input">Search by ISBN</label>
+                <input type="text" name="isbn" class="form-control" id="user_input" placeholder="0618346260, 9780618346264">
+            </div>
+            <div class="form-group">
+                <label for="title_input">Search by title</label>
+                <input type="text" name="title" class="form-control" placeholder="A Christmas Carol">
+            </div>
+            <div class="form-group">
+                <label for="author_input">Search by author</label>
+                <input type="text" name="author" class="form-control" placeholder="Charles Dickens">
+            </div>
+                <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+    </div>
+</div>
+
+
+{% endif %}
+{% endblock %}
