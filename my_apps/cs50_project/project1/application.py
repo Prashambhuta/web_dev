@@ -196,13 +196,17 @@ def api(isbn):
         books_object = db.execute("SELECT * FROM books WHERE isbn = '%s'" % isbn).fetchone()
         if books_object:
             reviews_object = db.execute("SELECT COUNT(*), AVG(rating) FROM reviews WHERE book_id = %d" % books_object.id).fetchone()
+
+            # converting to printable objects
+            review_count = reviews_object.count
+            review_average_rating = reviews_object.avg
             api_result = {
                 "title":            books_object.title,
                 "author":           books_object.author,
                 "year":             int(books_object.year),
                 "isbn":             str(isbn),
-                "review_count":     reviews_object.count,
-                "average_rating":   reviews_object.avg,
+                "review_count":     review_count,
+                "average_rating":   round(review_average_rating, 1)
             }
             return (api_result)
 
