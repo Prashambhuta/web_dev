@@ -32,14 +32,17 @@ Web Programming with Python and JavaScript
 # Images
 ![](http://i.imgur.com/3Tjxhhj.png)
 
+-----
 ![](http://i.imgur.com/y8ja9Ap.png)
+
+------
 
 ![](http://i.imgur.com/HYj1eTS.png)
 
+------
+
 ![](http://i.imgur.com/ucyLLV0.png)
 
+-----
+
 ![](http://i.imgur.com/18WwheN.png)
-
-
-
-
