@@ -217,7 +217,7 @@ def api(isbn):
                     "year":             int(books_object.year),
                     "isbn":             str(isbn),
                     "review_count":     review_count,
-                    "average_rating":   'null'
+                    "average_rating":   'N/A'
                 }
                 return (api_result)
 
