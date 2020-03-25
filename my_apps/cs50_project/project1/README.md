@@ -10,11 +10,13 @@ Web Programming with Python and JavaScript
 * Generate `json` response for API requests on website.
 
 # Usage
+* Check out the [video here](https://streamja.com/qVar0)
 * Home
 * Registration/Login
 * Search books
 * Individual book page with reviews & goodreads data
 * API request page
+
 
 # Files
 * /static
