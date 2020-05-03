@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    background-color: hsl(240, 78%, 98%);
+    background-image: url('../src/images/bg-bottom.svg');
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    height: 100%;
+}
+
+.price-component {
+    background-image: url('../src/images/bg-top.svg');
+    background-repeat: no-repeat;
+    background-position: top right;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8rem;
+}
+
+.price-heading {
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: 700;
+    color: hsl(232, 13, 33)
+}
+
+.pricing-switch {
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+    transition: all 0.35s ease-out;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+}
+
+.switch {
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    background-clip: padding-box;
+    position: relative;
+    min-width: 5rem;
+    padding: 0 2rem;
+    border: none;
+    overflow: visible;
+    width: 5rem;
+    height: 3rem;
+    z-index: 0;
+    text-align: left;
+    margin: 2rem 1rem;
+}
+
+.switch-input {
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    z-index: 1;
+    vertical-align: top;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    appearance: none;
+    z-index: 0;
+}
+
+:checked+.switch-toggle {
+    box-shadow: inset 0 0 0 2px hsl(240, 78%, 79%);
+    background-image: linear-gradient(to right, hsl(236, 72, 79), hsl(237, 63, 64));   
+}
+
+.switch-toggle {
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 3rem;
+    transition: all 0.35s ease-out;
+    box-shadow: inset 0 0 0 2px #e5e5e5;
+}
+
+:checked+.switch-toggle>.switch-handle {
+    left: 24px;
+    box-shadow: 0 3px 2px rgba($color: #000000, $alpha: 0.25);
+}
+
+.switch-handle {
+    box-sizing: border-box;
+    background-clip: padding-box;
+    position: absolute;
+    content: '';
+    border-radius: 50%;
+    height: 2.2rem;
+    width: 2.2rem;
+    background-color: white;
+    left: 1px;
+    top: 3px;
+    transition: all 0.35s cubic-bezier(.59,0.01, .5, .99);
+    box-shadow: 0 0 1px 0 rgba($color: #000000, $alpha: .15), 0 3px 2px rgba($color: #000000, $alpha: .15);
+
+}
+
+.toggle_on {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 900;
+}
+
+.toggle_on span, .toggle_off span {
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.toggle_off {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 900;
+}
+
+.card-body {
+    padding: 2rem 0 !important;
+    flex: none !important;
+
+}
+
+.card-body ul {
+    list-style: none;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.card-body ul li {
+    text-align: center;
+    padding: 1rem;
+    color: hsl(233, 13, 49);
+}
+
+.card-middle .card-body ul li {
+    color: white;
+}
+
+.card-body ul li {
+    border-bottom: 1px solid hsl(234, 14, 74);
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background-color: white;
+    padding: 3rem;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: hsl(232, 13, 33);
+    box-shadow: 0 1px 2px rgba(0,0,0, .25);
+    min-width: 30rem;
+}
+
+.card-middle {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background-image: linear-gradient(to bottom right, hsl(236, 72, 79), hsl(237, 63, 64));
+    height: 106%;
+    z-index: 1;
+    padding: 3rem;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-top: -14px;
+}
+
+.card-title {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.card-price {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+}
+.dollar-sign {
+    font-size: 1.6rem;
+}
+
+.btn-sides {
+    background-image: linear-gradient(to bottom right, hsl(236, 72, 79), hsl(237, 63, 64));
+    text-transform: uppercase;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    color: white;
+    font-weight: 700;
+    padding: 0.7rem 2rem;
+    cursor: pointer;
+}
+
+.btn-sides:hover {
+    background-color: white;
+    background-image: none;
+    color: hsl(240, 78%, 79%);
+}
+
+.btn-middle {
+    background-color: white;
+    background-image: none;
+    color: hsl(240, 78%, 79%);
+    text-transform: uppercase;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 0.7rem 2rem;
+    margin-top: 20px;
+
+}
+
+.btn-middle:hover {
+    background-color: white;
+    background-image: linear-gradient(to right, hsl(236, 72, 79), hsl(237, 63, 64));
+    color: white;
+}

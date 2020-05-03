@@ -1,0 +1,23 @@
+@media (max-width: 720px) {
+    .price-component {
+        height: 100%;
+        padding: 4rem;
+    }
+
+    .cards {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+        margin: 2rem 0;
+        z-index: 1;
+    }
+
+    .card-middle {
+        height: 100%;
+        margin-top: 10px;
+    }
+
+}
